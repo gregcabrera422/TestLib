@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.gospce.adc.gospcelib.C
-
+    <com.gospce.adc.gospcelib.CustomButton
+        android:text="test"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"/>
 </android.support.constraint.ConstraintLayout>
