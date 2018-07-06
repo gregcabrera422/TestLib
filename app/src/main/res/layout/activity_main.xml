@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:orientation="vertical">
 
     <com.gospce.adc.gospcelib.CustomButton
-        android:text="test"
+        android:id="@+id/myButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:buttonText="Check Availability"
+        android:textColor="#FFF"
+        app:buttonColor="@color/pine"
+        android:foreground="?android:attr/selectableItemBackground">
+    </com.gospce.adc.gospcelib.CustomButton>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Check Availability"/>
+
+    <com.gospce.adc.gospcelib.CustomEditText
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/colorAccent"/>
+        android:layout_height="50dp"></com.gospce.adc.gospcelib.CustomEditText>
 
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
