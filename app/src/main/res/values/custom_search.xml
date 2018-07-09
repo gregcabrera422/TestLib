@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomSearch">
-        <attr name="imageSize" format="string"/>
         <attr name="searchHint" format="string"/>
+        <attr name="searchHintColor" format="color"/>
+        <attr name="searchColor" format="color"/>
+        <attr name="searchBorderColor" format="color"/>
+        <attr name="searchRadius" format="dimension"/>
+        <attr name="searchBorderWidth" format="integer"/>
     </declare-styleable>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/custom_search"
+    android:background="@drawable/custom_input_field"
     android:paddingHorizontal="15dp"
     android:paddingTop="5dp"
     android:paddingBottom="10dp">

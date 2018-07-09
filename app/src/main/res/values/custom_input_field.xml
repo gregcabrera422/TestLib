@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomInputField">
-        <attr name="textTitle" format="string"/>
+        <attr name="inputTitle" format="string"/>
         <attr name="inputHint" format="string"/>
         <attr name="inputHintColor" format="color"/>
+        <attr name="inputColor" format="color"/>
+        <attr name="inputBorderColor" format="color"/>
+        <attr name="inputRadius" format="dimension"/>
+        <attr name="inputBorderWidth" format="integer"/>
     </declare-styleable>
 </resources>

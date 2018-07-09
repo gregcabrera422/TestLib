@@ -2,9 +2,12 @@ package com.gospce.adc.gospcelib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.GradientDrawable;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,6 +16,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.jakewharton.rxbinding2.widget.TextViewTextChangeEvent;
+
+import org.w3c.dom.Text;
+
+import java.util.Observable;
+
+import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 
 public class CustomSearch extends LinearLayout{
 
@@ -20,6 +34,7 @@ public class CustomSearch extends LinearLayout{
     private ImageView ivSearch;
     private EditText etSearch;
     private ImageView ivDelete;
+
 
     public CustomSearch(@NonNull Context context) {
         super(context);
@@ -40,13 +55,30 @@ public class CustomSearch extends LinearLayout{
         layoutInflater.inflate(R.layout.custom_search, this, true);
 
         TypedArray attributes = getContext().obtainStyledAttributes(attrs,R.styleable.CustomSearch);
+        setBackgroundResource(R.drawable.custom_search);
 
         background = findViewById(R.id.background);
         ivSearch = findViewById(R.id.ivSearch);
         etSearch = findViewById(R.id.etSearch);
         ivDelete = findViewById(R.id.ivDelete);
 
+        GradientDrawable border = (GradientDrawable)getBackground();
+        border.mutate();
+        border.setColor(attributes.getColor(R.styleable.CustomSearch_searchColor, getResources().getColor(R.color.white)));
+        border.setStroke(attributes.getInt(R.styleable.CustomSearch_searchBorderWidth,5), attributes.getColor(R.styleable.CustomSearch_searchBorderColor,getResources().getColor(R.color.black)));
+        border.setCornerRadius(attributes.getDimension(R.styleable.CustomSearch_searchRadius,8));
 
+//        RxTextView.textChanges(etSearch)
+//            .map(new Function<CharSequence, Object>() {
+//
+//                @Override
+//                public Object apply(CharSequence charSequence) throws Exception {
+//                    ivDelete.setVisibility(TextUtils.isEmpty(charSequence) ? ImageView.INVISIBLE : ImageView.VISIBLE);
+//
+//                    return charSequence;
+//                }
+//
+//            });
 
         etSearch.setHint(attributes.getString(R.styleable.CustomSearch_searchHint));
 

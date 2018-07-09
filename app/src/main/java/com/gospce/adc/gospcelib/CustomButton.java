@@ -29,10 +29,11 @@ public class CustomButton extends AppCompatButton {
         setBackgroundResource(R.drawable.custom_button);
         setGravity(Gravity.CENTER);
 
-        GradientDrawable bgShape = (GradientDrawable)getBackground();
-        bgShape.mutate();
-        bgShape.setColor(attributes.getColor(R.styleable.CustomButton_buttonColor, 0));
-        bgShape.setStroke(5, attributes.getColor(R.styleable.CustomButton_buttonBorderColor,0));
+        GradientDrawable border = (GradientDrawable)getBackground();
+        border.mutate();
+        border.setColor(attributes.getColor(R.styleable.CustomButton_buttonColor, getResources().getColor(R.color.gray)));
+        border.setStroke(attributes.getInt(R.styleable.CustomButton_buttonBorderWidth,0), attributes.getColor(R.styleable.CustomButton_buttonBorderColor,0));
+        border.setCornerRadius(attributes.getDimension(R.styleable.CustomButton_buttonRadius,0));
         attributes.recycle();
     }
 

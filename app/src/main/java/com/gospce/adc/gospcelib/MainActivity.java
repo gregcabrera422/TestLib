@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private CustomButton myButton;
-    private CustomSearch myEditText;
-
+    private CustomSearch mySearch;
+    private CustomInputField myInputField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,15 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myButton = findViewById(R.id.myButton);
-        myEditText = findViewById(R.id.myEditText);
-        myEditText.setText("Test input");
-        myButton.setOnClickListener(new CustomButton.OnClickListener(){
-            public void onClick(View v){
+        mySearch = findViewById(R.id.myEditText);
+        myInputField = findViewById(R.id.myInputField);
 
-                System.out.println("TEXT: " + myEditText.getText());
-                Toast.makeText(getApplicationContext(), myEditText.getText(), Toast.LENGTH_LONG);
+//        myInputField.setError();
 
-            }
-        });
     }
+
 }

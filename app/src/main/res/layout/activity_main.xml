@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/cadetblue">
 
     <com.gospce.adc.gospcelib.CustomButton
         android:id="@+id/myButton"
@@ -14,41 +15,41 @@
         android:layout_height="wrap_content"
         app:buttonText="Search"
         android:textColor="#FFF"
+        app:buttonRadius="5dp"
         app:buttonColor="@color/pine"
         android:foreground="?android:attr/selectableItemBackground">
     </com.gospce.adc.gospcelib.CustomButton>
-
-    <com.gospce.adc.gospcelib.CustomButton
-        android:id="@+id/myButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:buttonText="Save"
-        android:textColor="@color/black"
-        app:buttonBorderColor="@color/black"
-        android:foreground="?android:attr/selectableItemBackground">
-    </com.gospce.adc.gospcelib.CustomButton>
-
-    <Button
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="Check Availability"/>
 
     <com.gospce.adc.gospcelib.CustomSearch
         android:id="@+id/myEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        app:searchHint="Search city">
+        app:searchHint="Search city"
+        app:searchRadius="8dp">
     </com.gospce.adc.gospcelib.CustomSearch>
 
     <com.gospce.adc.gospcelib.CustomInputField
+        android:id="@+id/myInputField"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:inputHint="Enter your name"
-        app:textTitle="Name"
-        app:inputHintColor="@color/pine">
+        app:inputTitle="Enter your name"
+        app:inputHintColor="@color/pine"
+        app:inputBorderWidth="5"
+        app:inputRadius="5dp">
     </com.gospce.adc.gospcelib.CustomInputField>
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="40dp" />
+
+    <com.gospce.adc.gospcelib.CustomButton
+        android:id="@+id/myButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonText="Login"
+        app:buttonBorderWidth="5"
+        app:buttonColor="@color/white"
+        app:buttonRadius="8dp"
+        android:textColor="@color/pine"
+        app:buttonBorderColor="@color/pine"
+        android:foreground="?android:attr/selectableItemBackground">
+    </com.gospce.adc.gospcelib.CustomButton>
 
 </LinearLayout>
