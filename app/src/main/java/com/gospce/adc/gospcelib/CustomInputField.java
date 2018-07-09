@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class CustomInputField extends LinearLayout{
+public class CustomInputField extends LinearLayout {
 
     private EditText etInput;
     private TextView tvTitle;

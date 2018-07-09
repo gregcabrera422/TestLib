@@ -35,9 +35,9 @@
 
     <com.gospce.adc.gospcelib.CustomSearch
         android:id="@+id/myEditText"
-        android:layout_width="250dp"
-        app:searchHint="Search city"
-        android:layout_height="50dp">
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:searchHint="Search city">
     </com.gospce.adc.gospcelib.CustomSearch>
 
     <com.gospce.adc.gospcelib.CustomInputField

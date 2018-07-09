@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomSearch">
-        <attr name="imageSize" format="string"/>
+        <attr name="imageSize" format=""/>
         <attr name="searchHint" format="string"/>
     </declare-styleable>
 </resources>

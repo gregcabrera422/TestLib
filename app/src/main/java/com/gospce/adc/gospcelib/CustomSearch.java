@@ -12,9 +12,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class CustomSearch extends LinearLayout{
 
+    private LinearLayout background;
+    private ImageView ivSearch;
     private EditText etSearch;
     private ImageView ivDelete;
 
@@ -38,8 +41,12 @@ public class CustomSearch extends LinearLayout{
 
         TypedArray attributes = getContext().obtainStyledAttributes(attrs,R.styleable.CustomSearch);
 
+        background = findViewById(R.id.background);
+        ivSearch = findViewById(R.id.ivSearch);
         etSearch = findViewById(R.id.etSearch);
         ivDelete = findViewById(R.id.ivDelete);
+
+
 
         etSearch.setHint(attributes.getString(R.styleable.CustomSearch_searchHint));
 
