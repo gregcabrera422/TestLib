@@ -12,9 +12,19 @@
         android:id="@+id/myButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        app:buttonText="Check Availability"
+        app:buttonText="Search"
         android:textColor="#FFF"
         app:buttonColor="@color/pine"
+        android:foreground="?android:attr/selectableItemBackground">
+    </com.gospce.adc.gospcelib.CustomButton>
+
+    <com.gospce.adc.gospcelib.CustomButton
+        android:id="@+id/myButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonText="Save"
+        android:textColor="@color/black"
+        app:buttonBorderColor="@color/black"
         android:foreground="?android:attr/selectableItemBackground">
     </com.gospce.adc.gospcelib.CustomButton>
 
@@ -23,8 +33,22 @@
         android:layout_height="wrap_content"
         android:text="Check Availability"/>
 
-    <com.gospce.adc.gospcelib.CustomEditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"></com.gospce.adc.gospcelib.CustomEditText>
+    <com.gospce.adc.gospcelib.CustomSearch
+        android:id="@+id/myEditText"
+        android:layout_width="250dp"
+        app:searchHint="Search city"
+        android:layout_height="50dp">
+    </com.gospce.adc.gospcelib.CustomSearch>
+
+    <com.gospce.adc.gospcelib.CustomInputField
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:inputHint="Enter your name"
+        app:textTitle="Name"
+        app:inputHintColor="@color/pine">
+    </com.gospce.adc.gospcelib.CustomInputField>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp" />
 
 </LinearLayout>

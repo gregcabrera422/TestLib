@@ -2,9 +2,10 @@
 <LinearLayout
     android:id="@+id/background"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@drawable/custom_search"
     android:padding="5dp">
 
     <ImageView
@@ -15,8 +16,7 @@
     <EditText
         android:id="@+id/etSearch"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="Search City"
+        android:layout_height="match_parent"
         android:maxLines="1"
         android:inputType="text"
         android:drawablePadding="5dp"
