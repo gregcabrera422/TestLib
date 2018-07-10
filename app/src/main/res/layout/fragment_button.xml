@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/side_nav_bar"
+        android:layout_weight="1">
+
+        <com.gospce.adc.gospcelib.CustomButton
+            android:id="@+id/myButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Button"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter button text"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnText"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etWidth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter button width"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnWidth"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter button height"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnHeight"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter button color"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnColor"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etRadius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter button radius"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnRadius"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

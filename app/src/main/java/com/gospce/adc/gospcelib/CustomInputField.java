@@ -2,6 +2,7 @@ package com.gospce.adc.gospcelib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -56,6 +57,25 @@ public class CustomInputField extends LinearLayout {
         border.setStroke(attributes.getInt(R.styleable.CustomInputField_inputBorderWidth,5), attributes.getColor(R.styleable.CustomInputField_inputBorderColor,getResources().getColor(R.color.black)));
         border.setCornerRadius(attributes.getDimension(R.styleable.CustomInputField_inputRadius,8));
 
+    }
+
+    public void setColor(String color){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setColor(Color.parseColor(color));
+    }
+    public void setRadius(int radius){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setCornerRadius(radius);
+    }
+
+    public void setStroke(int borderWidth, String color){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setStroke(borderWidth, Color.parseColor(color));
+    }
+
+    public void setCornerRadius(int radius){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setCornerRadius(Float.valueOf(radius));
     }
 
     public Editable getText() {

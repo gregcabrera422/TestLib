@@ -2,6 +2,7 @@ package com.gospce.adc.gospcelib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -110,6 +111,25 @@ public class CustomSearch extends LinearLayout{
             }
         });
 
+    }
+
+    public void setColor(String color){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setColor(Color.parseColor(color));
+    }
+    public void setRadius(int radius){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setCornerRadius(radius);
+    }
+
+    public void setStroke(int borderWidth, String color){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setStroke(borderWidth, Color.parseColor(color));
+    }
+
+    public void setCornerRadius(int radius){
+        GradientDrawable background = (GradientDrawable)getBackground();
+        background.setCornerRadius(Float.valueOf(radius));
     }
 
     public Editable getText() {
