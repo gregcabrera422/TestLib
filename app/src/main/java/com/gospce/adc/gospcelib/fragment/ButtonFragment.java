@@ -14,12 +14,13 @@ import android.widget.LinearLayout;
 
 import com.gospce.adc.gospcelib.CustomButton;
 import com.gospce.adc.gospcelib.R;
+import com.gospce.adc.gospcelib.utility.TestMethods;
 
 public class ButtonFragment extends Fragment implements View.OnClickListener{
 
     CustomButton myButton;
     EditText etText, etWidth, etHeight, etColor, etRadius, etBorderWidth, etBorderColor;
-
+    TestMethods testMethods = new TestMethods();
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_button, null);
@@ -52,46 +53,23 @@ public class ButtonFragment extends Fragment implements View.OnClickListener{
 
         switch(view.getId()){
             case R.id.btnText:
-                myButton.setText(etText.getText().toString());
+                testMethods.editText(myButton, etText);
                 break;
             case R.id.btnWidth:
-                String strWidth = etWidth.getText().toString();
-                if(!TextUtils.isEmpty(strWidth)) {
-                    ViewGroup.LayoutParams widthParam = myButton.getLayoutParams();
-                    widthParam.width = Integer.parseInt(strWidth);
-                    myButton.setLayoutParams(widthParam);
-                }
+                testMethods.editWidth(myButton, etWidth);
                 break;
             case R.id.btnHeight:
-                String strHeight = etHeight.getText().toString();
-
-                if(!TextUtils.isEmpty(strHeight)) {
-                    ViewGroup.LayoutParams heightParam = myButton.getLayoutParams();
-                    heightParam.height = Integer.parseInt(strHeight);
-                    myButton.setLayoutParams(heightParam);
-                }
+                testMethods.editHeight(myButton, etHeight);
                 break;
             case R.id.btnColor:
-                String strColor = etColor.getText().toString();
-
-                if(!TextUtils.isEmpty(strColor)){
-                    myButton.setColor(strColor);
-                }
+                testMethods.editColor(myButton, etColor);
                 break;
             case R.id.btnRadius:
-
-                if(!TextUtils.isEmpty(etRadius.getText().toString())){
-                    int radius = Integer.parseInt(etRadius.getText().toString());
-                    myButton.setRadius(radius);
-                }
+                testMethods.editRadius(myButton, etRadius);
                 break;
             case R.id.btnStoke:
-                String strBorderColor = etBorderColor.getText().toString();
-
-                if(!TextUtils.isEmpty(strBorderColor)&&TextUtils.isEmpty(etBorderWidth.getText().toString())){
-                    int borderWidth = Integer.parseInt(etBorderWidth.getText().toString());
-                    myButton.setStroke(borderWidth, strBorderColor);
-                }
+                testMethods.editStroke(myButton, etBorderWidth, etBorderColor);
+                break;
         }
     }
 }

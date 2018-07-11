@@ -14,6 +14,7 @@ import android.widget.ToggleButton;
 import com.gospce.adc.gospcelib.CustomButton;
 import com.gospce.adc.gospcelib.CustomInputField;
 import com.gospce.adc.gospcelib.R;
+import com.gospce.adc.gospcelib.utility.TestMethods;
 
 import org.w3c.dom.Text;
 
@@ -22,6 +23,7 @@ public class InputFieldFragment extends Fragment implements View.OnClickListener
     CustomInputField myInputField;
     EditText etTitle, etHint, etHintColor, etColor, etWidth, etHeight, etRadius;
     ToggleButton tbError;
+    TestMethods testMethods = new TestMethods();
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,10 +59,7 @@ public class InputFieldFragment extends Fragment implements View.OnClickListener
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btnTitle:
-                String strTitle = etTitle.getText().toString();
-                if(!TextUtils.isEmpty(strTitle)){
-                    myInputField.setTitle(strTitle);
-                }
+                testMethods.editTitle(myInputField, etTitle);
                 break;
             case R.id.btnHint:
                 String strHint = etHint.getText().toString();
@@ -75,26 +74,13 @@ public class InputFieldFragment extends Fragment implements View.OnClickListener
                 }
                 break;
             case R.id.btnColor:
-                String strColor = etColor.getText().toString();
-                if(!TextUtils.isEmpty(strColor)){
-                    myInputField.setColor(strColor);
-                }
+                testMethods.editColor(myInputField, etColor);
                 break;
             case R.id.btnHeight:
-                String strHeight = etHeight.getText().toString();
-                if(!TextUtils.isEmpty(strHeight)) {
-                    ViewGroup.LayoutParams heightParam = myInputField.getLayoutParams();
-                    heightParam.height = Integer.parseInt(strHeight);
-                    myInputField.setLayoutParams(heightParam);
-                }
+                testMethods.editHeight(myInputField, etHeight);
                 break;
             case R.id.btnWidth:
-                String strWidth = etWidth.getText().toString();
-                if(!TextUtils.isEmpty(strWidth)) {
-                    ViewGroup.LayoutParams widthParam = myInputField.getLayoutParams();
-                    widthParam.width = Integer.parseInt(strWidth);
-                    myInputField.setLayoutParams(widthParam);
-                }
+                testMethods.editHeight(myInputField, etWidth);
                 break;
             case R.id.tbError:
                 if(tbError.isChecked()){
@@ -104,11 +90,7 @@ public class InputFieldFragment extends Fragment implements View.OnClickListener
                 }
                 break;
             case R.id.btnRadius:
-                if(!TextUtils.isEmpty(etRadius.getText().toString())){
-                    int radius = Integer.parseInt(etRadius.getText().toString());
-
-                    myInputField.setRadius(radius);
-                }
+                testMethods.editRadius(myInputField, etRadius);
                 break;
         }
     }
