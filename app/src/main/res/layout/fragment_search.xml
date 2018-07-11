@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/side_nav_bar"
+        android:layout_weight="1">
+
+        <com.gospce.adc.gospcelib.CustomSearch
+            android:id="@+id/mySearch"
+            android:layout_width="200dp"
+            android:layout_height="50dp"></com.gospce.adc.gospcelib.CustomSearch>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter hint"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnHint"
+                android:text="apply"
+                android:layout_width="80dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etHintColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Hint Color"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnHintColor"
+                android:text="apply"
+                android:layout_width="80dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Color"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnColor"
+                android:text="apply"
+                android:layout_width="80dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etRadius"
+                android:hint="Enter Radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnRadius"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="apply"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/etWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Width"
+                        android:layout_weight="1"
+                        android:textSize="15dp"/>
+                    <Button
+                        android:id="@+id/btnWidth"
+                        android:text="apply"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/etHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Height"
+                        android:textSize="15dp"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/btnHeight"
+                        android:text="apply"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

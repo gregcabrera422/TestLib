@@ -113,6 +113,14 @@ public class CustomSearch extends LinearLayout{
 
     }
 
+    public void setHint(String hint){
+        etSearch.setHint(hint);
+    }
+
+    public void setHintColor(String color){
+        etSearch.setHintTextColor(Color.parseColor(color));
+    }
+
     public void setColor(String color){
         GradientDrawable background = (GradientDrawable)getBackground();
         background.setColor(Color.parseColor(color));

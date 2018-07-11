@@ -22,6 +22,8 @@ public class CustomInputField extends LinearLayout {
 
     private EditText etInput;
     private TextView tvTitle;
+    private AttributeSet attrs;
+    TypedArray attributes = getContext().obtainStyledAttributes(attrs,R.styleable.CustomInputField);
 
     public CustomInputField(@NonNull Context context) {
         super(context);
@@ -42,6 +44,7 @@ public class CustomInputField extends LinearLayout {
         layoutInflater.inflate(R.layout.custom_input_field, this, true);
 
         TypedArray attributes = getContext().obtainStyledAttributes(attrs,R.styleable.CustomInputField);
+
         setBackgroundResource(R.drawable.custom_input_field);
         etInput = findViewById(R.id.etInput);
         tvTitle = findViewById(R.id.tvTitle);
@@ -68,14 +71,21 @@ public class CustomInputField extends LinearLayout {
         background.setCornerRadius(radius);
     }
 
-    public void setStroke(int borderWidth, String color){
-        GradientDrawable background = (GradientDrawable)getBackground();
-        background.setStroke(borderWidth, Color.parseColor(color));
-    }
-
     public void setCornerRadius(int radius){
         GradientDrawable background = (GradientDrawable)getBackground();
         background.setCornerRadius(Float.valueOf(radius));
+    }
+
+    public void setTitle(String title){
+        tvTitle.setText(title);
+    }
+
+    public void setHint(String hint){
+        etInput.setHint(hint);
+    }
+
+    public void setHintColor(String color){
+        etInput.setHintTextColor(Color.parseColor(color));
     }
 
     public Editable getText() {
@@ -86,10 +96,17 @@ public class CustomInputField extends LinearLayout {
         etInput.setText(str);
     }
 
-    public void setError(){
+    public void setError(Boolean bool){
+
         GradientDrawable border = (GradientDrawable)getBackground();
-        border.mutate();
-        border.setStroke(5, getResources().getColor(R.color.red));
+
+        if(bool == true){
+            border.setStroke(5, getResources().getColor(R.color.red));
+        }else{
+            border.setStroke(attributes.getInt(R.styleable.CustomInputField_inputBorderWidth,5), attributes.getColor(R.styleable.CustomInputField_inputBorderColor,getResources().getColor(R.color.black)));
+
+        }
+
     }
 
 }

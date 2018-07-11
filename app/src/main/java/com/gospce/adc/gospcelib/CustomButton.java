@@ -49,9 +49,9 @@ public class CustomButton extends AppCompatButton {
         background.setCornerRadius(radius);
     }
 
-    public void setStroke(int borderWidth, String color){
+    public void setStroke(int borderWidth, String borderColor){
         GradientDrawable background = (GradientDrawable)getBackground();
-        background.setStroke(borderWidth, Color.parseColor(color));
+        background.setStroke(borderWidth, Color.parseColor(borderColor));
     }
 
     public void setCornerRadius(int radius){

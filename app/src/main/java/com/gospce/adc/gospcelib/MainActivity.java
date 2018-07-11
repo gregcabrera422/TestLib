@@ -17,6 +17,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.gospce.adc.gospcelib.fragment.ButtonFragment;
+import com.gospce.adc.gospcelib.fragment.InputFieldFragment;
+import com.gospce.adc.gospcelib.fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,15 +88,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_button) {
             fragment = new ButtonFragment();
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_input_field) {
+            fragment = new InputFieldFragment();
+        } else if (id == R.id.nav_search) {
+            fragment = new SearchFragment();
+        } else if (id == R.id.nav_toggle_button) {
 
         } else if (id == R.id.nav_send) {
 

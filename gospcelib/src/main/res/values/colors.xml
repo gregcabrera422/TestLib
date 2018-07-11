@@ -6,4 +6,8 @@
     <color name="black">#000</color>
     <color name="pine">#01796F</color>
     <color name="transparent">#00000000</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#cc0000</color>
+    <color name="cadetblue">#5F9F9F</color>
 </resources>
