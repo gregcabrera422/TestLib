@@ -57,8 +57,14 @@ public class CustomInputField extends LinearLayout {
         GradientDrawable border = (GradientDrawable)getBackground();
         border.mutate();
         border.setColor(attributes.getColor(R.styleable.CustomInputField_inputColor, getResources().getColor(R.color.white)));
-        border.setStroke(attributes.getInt(R.styleable.CustomInputField_inputBorderWidth,5), attributes.getColor(R.styleable.CustomInputField_inputBorderColor,getResources().getColor(R.color.black)));
         border.setCornerRadius(attributes.getDimension(R.styleable.CustomInputField_inputRadius,8));
+
+        if(attributes.getBoolean(R.styleable.CustomInputField_inputError, false) == true){
+            border.setStroke(5, getResources().getColor(R.color.red));
+        }else{
+            border.setStroke(attributes.getInt(R.styleable.CustomInputField_inputBorderWidth,5), attributes.getColor(R.styleable.CustomInputField_inputBorderColor,getResources().getColor(R.color.black)));
+        }
+
 
     }
 

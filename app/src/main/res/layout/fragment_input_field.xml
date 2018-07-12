@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.widget.ToggleButton"/>
+        <variable name="properties" type="com.gospce.adc.gospcelib.utility.TestMethods"/>
+    </data>
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -41,6 +46,7 @@
                 android:id="@+id/btnTitle"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
+                android:onClick="@{()->properties.editTitle(myInputField, etTitle)}"
                 android:text="apply"/>
         </LinearLayout>
         <LinearLayout
@@ -57,6 +63,7 @@
                 android:id="@+id/btnHint"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
+                android:onClick="@{()->properties.editHint(myInputField, etHint)}"
                 android:text="apply"/>
         </LinearLayout>
         <LinearLayout
@@ -73,6 +80,7 @@
                 android:id="@+id/btnColor"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
+                android:onClick="@{()->properties.editColor(myInputField, etColor)}"
                 android:text="apply"/>
         </LinearLayout>
         <LinearLayout
@@ -97,6 +105,7 @@
                     android:id="@+id/btnHintColor"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:onClick="@{()->properties.editHintColor(myInputField, etHintColor)}"
                     android:text="apply"/>
             </LinearLayout>
             <LinearLayout
@@ -118,6 +127,7 @@
                     android:id="@+id/btnRadius"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:onClick="@{()->properties.editRadius(myInputField, etRadius)}"
                     android:text="apply"/>
             </LinearLayout>
 
@@ -144,6 +154,7 @@
                     android:id="@+id/btnWidth"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:onClick="@{()->properties.editWidth(myInputField, etWidth)}"
                     android:text="apply"/>
             </LinearLayout>
             <LinearLayout
@@ -164,6 +175,7 @@
                     android:id="@+id/btnHeight"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:onClick="@{()->properties.editHeight(myInputField, etHeight)}"
                     android:text="apply"/>
             </LinearLayout>
         </LinearLayout>
@@ -175,10 +187,12 @@
                 android:id="@+id/tbError"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:checked="false"
                 android:textOff="Raise Error"
-                android:textOn="Return"/>
+                android:textOn="Return" />
         </LinearLayout>
     </LinearLayout>
 
 
 </LinearLayout>
+</layout>

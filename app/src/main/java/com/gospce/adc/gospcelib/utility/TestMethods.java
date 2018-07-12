@@ -29,6 +29,28 @@ public class TestMethods {
         }
     }
 
+    public void editHint(Object object, EditText editHint){
+        if(object instanceof CustomInputField){
+            CustomInputField inputField = (CustomInputField)object;
+
+            String strHint = editHint.getText().toString();
+            if(!TextUtils.isEmpty(strHint)){
+                inputField.setHint(strHint);
+            }
+        }
+    }
+
+    public void editHintColor(Object object, EditText etHintColor){
+        if(object instanceof CustomInputField){
+            CustomInputField inputField = (CustomInputField)object;
+
+            String strHintColor = etHintColor.getText().toString();
+            if(!TextUtils.isEmpty(strHintColor)){
+                inputField.setHintColor(strHintColor);
+            }
+        }
+    }
+
     public void editWidth(Object object, EditText editWidth){
         if(object instanceof CustomButton){
             CustomButton button = (CustomButton) object;

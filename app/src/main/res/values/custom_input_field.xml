@@ -8,5 +8,6 @@
         <attr name="inputBorderColor" format="color"/>
         <attr name="inputRadius" format="dimension"/>
         <attr name="inputBorderWidth" format="integer"/>
+        <attr name="inputError" format="string"/>
     </declare-styleable>
 </resources>
